@@ -27,6 +27,7 @@ const makeEven = str => {
 }
 
 console.log(makeEven('hello'));
+console.log(`----------------------------------------`)
 
 
 /* 2
@@ -43,7 +44,10 @@ const getLastChar = (str) =>{
     return str[str.length - 1]
 }
 
+// ONE LINER: const getLastChar = (str) => str[str.length - 1]
+
 console.log(getLastChar('pamela'));
+console.log(`----------------------------------------`)
 
 /* 3
     @func get3rdChar
@@ -53,6 +57,21 @@ console.log(getLastChar('pamela'));
     @example - get3rdChar('taq'); // 'q'
     @example - get3rdChar('mo'); // 'not enough characters!'
 */
+
+//SOLTUION:
+const get3rdChar = str => {
+
+    if (str.length <= 2){  
+          return 'not enough characters';
+    }
+
+    return str.charAt(2);
+
+}
+
+console.log(get3rdChar('pl') ,'not enough characters');
+console.log(get3rdChar('playuh'), 'a')
+console.log(`----------------------------------------`)
 
 /* 4
     @func get3rdCharFromEnd
