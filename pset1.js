@@ -83,6 +83,24 @@ console.log(`----------------------------------------`)
     @example - get3rdCharFromEnd('taq karim'); // 'r'
 */
 
+//SOLUTION:
+const get3rdCharFromEnd = str => {
+
+     if (str.length <= 2){  
+        return 'not enough characters'}
+
+  
+    return str[str.length - 3];
+
+}
+
+console.log(get3rdCharFromEnd('pamela') , 'e');
+console.log(get3rdCharFromEnd('taq') , 't');
+console.log(get3rdCharFromEnd('mo') , 'not enough characters');
+console.log(get3rdCharFromEnd('taq karim') , 'r');
+console.log(get3rdCharFromEnd('taq karim good looks fam') , 'f');
+console.log(`----------------------------------------`)
+
 /* 5
     @func startsWithVowel
     @param {string} str
