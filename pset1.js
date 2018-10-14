@@ -37,6 +37,14 @@ console.log(makeEven('hello'));
     @example - getLastChar('taq'); // 'q'
 */
 
+//SOLUTION:
+const getLastChar = (str) =>{
+
+    return str[str.length - 1]
+}
+
+console.log(getLastChar('pamela'));
+
 /* 3
     @func get3rdChar
     @param {string} str
