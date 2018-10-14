@@ -112,6 +112,24 @@ console.log(`----------------------------------------`)
     @example - startsWithVowel('Andy'); // true
 */
 
+//SOLUTION:
+
+const startsWithVowel = str => {
+    str = str.toLowerCase().slice(0,1);
+
+    if ((str === 'a') || (str === 'e') || (str === 'i') || (str === 'o') || (str === 'u')) {
+        return true;
+        }
+
+    return false;
+}
+
+console.log(startsWithVowel('pamela') , 'false');
+console.log(startsWithVowel('taq'), 'false');
+console.log(startsWithVowel('andy'), 'true');
+console.log(startsWithVowel('Andy'), 'true');
+// Vowels: a, e, i, o, u
+
 /* 6
     @func endsWithVowel
     @param {string} str
