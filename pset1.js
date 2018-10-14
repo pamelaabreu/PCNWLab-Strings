@@ -15,6 +15,18 @@
     @example - makeEven('taq');  // 'taq#'
     @example - makeEven('john'); // 'john'
 */
+//SOLUTION:
+const makeEven = str => {
+    const input = str.length
+
+    if (input % 2 === 0){
+        return `${str}#`
+    }
+
+    return str;
+}
+
+console.log(makeEven('hello'));
 
 
 /* 2
