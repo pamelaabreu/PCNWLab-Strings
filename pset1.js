@@ -17,16 +17,16 @@
 */
 //SOLUTION:
 const makeEven = str => {
-    const input = str.length
+    const numChars = str.length
 
-    if (input % 2 === 0){
+    if (numChars % 2 === 1){
         return `${str}#`
     }
 
     return str;
 }
 
-console.log(makeEven('hello'));
+console.log(makeEven('hellllo'));
 console.log(`----------------------------------------`)
 
 
@@ -39,12 +39,14 @@ console.log(`----------------------------------------`)
 */
 
 //SOLUTION:
-const getLastChar = (str) =>{
+//LONG WAY:
+// const getLastChar = (str) =>{
 
-    return str[str.length - 1]
-}
+//     return str[str.length - 1]
+// }
 
-// ONE LINER: const getLastChar = (str) => str[str.length - 1]
+// ONE LINER: 
+const getLastChar = (str) => str[str.length - 1]
 
 console.log(getLastChar('pamela'));
 console.log(`----------------------------------------`)
@@ -128,6 +130,7 @@ console.log(startsWithVowel('pamela') , 'false');
 console.log(startsWithVowel('taq'), 'false');
 console.log(startsWithVowel('andy'), 'true');
 console.log(startsWithVowel('Andy'), 'true');
+console.log(`----------------------------------------`)
 // Vowels: a, e, i, o, u
 
 /* 6
@@ -141,6 +144,59 @@ console.log(startsWithVowel('Andy'), 'true');
     @example - endsWithVowel('AndI'); // true
 */
 
+//SOLUTION:
+
+const endsWithVowel = (str) => {
+    vowel = getLastChar(str).toLowerCase();
+
+    if ((vowel === 'a') || (vowel === 'e') || (vowel === 'i') || (vowel === 'o') || (vowel === 'u')) {
+        return true;
+        }
+
+    return false;
+
+}
+// // Vowels: a, e, i, o, u
+
+console.log(endsWithVowel('pamelA'), 'true');
+console.log(endsWithVowel('taq'), 'false');
+console.log(endsWithVowel('Dfghjkl'), 'false');
+console.log(endsWithVowel('andi'), 'true');
+console.log(endsWithVowel('AndI'), 'true');
+console.log(`----------------------------------------`)
+
+
+//indexOfFirst
+const endsWithVowel2 = (str) => {
+    vowel = getLastChar(str).toLowerCase();
+    searchTerm = 'a'||'e'||'i'||'o'||'u';
+
+    if ((vowel === str.indexOf(searchTerm)) ) {
+        return true;
+        }
+
+    return false;
+
+} 
+console.log(endsWithVowel2('jaya'),'true');
+console.log(endsWithVowel2('pam'),'false');
+
+//.slice(-1)    
+// const endsWithVowel3 = (str) => {        
+//     vowel = getLastChar(str).slice(-1);
+
+//     if ((vowel === 'a') || (vowel === 'e') || (vowel === 'i') || (vowel === 'o') || (vowel === 'u')) {
+//         return true;
+//         }
+
+//     return false;
+
+// }
+// // // Vowels: a, e, i, o, u
+
+// console.log(endsWithVowel3('kick'), 'false');
+// console.log(endsWithVowel3('psycho'), 'true');
+
 
 /* 7
     @func hasVowels
@@ -152,6 +208,8 @@ console.log(startsWithVowel('Andy'), 'true');
     @example - hasVowels('dfghjkl'); // false
     @example - hasVowels('taq karim'); // true
 */
+
+//SOLUTION
 
 
 /* 8
