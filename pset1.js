@@ -51,6 +51,7 @@ const getLastChar = (str) => str[str.length - 1]
 console.log(getLastChar('pamela'));
 console.log(`----------------------------------------`)
 
+
 /* 3
     @func get3rdChar
     @param {string} str
@@ -167,19 +168,21 @@ console.log(`----------------------------------------`)
 
 
 //indexOfFirst
-const endsWithVowel2 = (str) => {
-    vowel = getLastChar(str).toLowerCase();
-    searchTerm = 'a'||'e'||'i'||'o'||'u';
+// const endsWithVowel2 = (str) => {
+//     vowel = getLastChar(str).toLowerCase();
+//     searchTerm = 'aeiou'.indexOf(vowel) != -1
 
-    if ((vowel === str.indexOf(searchTerm)) ) {
-        return true;
-        }
+//     if ((vowel === 'aeiou'.indexOf(vowel) != -1) ) {
+//         return true;
+//         }
 
-    return false;
+//     return false;
 
-} 
-console.log(endsWithVowel2('jaya'),'true');
-console.log(endsWithVowel2('pam'),'false');
+// } 
+// console.log(endsWithVowel2('jaya'),'true');
+// console.log(endsWithVowel2('pam'),'false');
+
+//'aeiou'.indexOf(vowel) != -1
 
 //.slice(-1)    
 // const endsWithVowel3 = (str) => {        
@@ -211,6 +214,13 @@ console.log(endsWithVowel2('pam'),'false');
 
 //SOLUTION
 
+//Match : Finds chracters in a string.
+const hasVowels = str => str.match(/[aoeiu]/) ? true : false;
+console.log(hasVowels('lol'),'true')
+console.log(hasVowels('taq'), 'true')
+console.log(hasVowels('TAQ'), 'true')
+console.log(hasVowels('DFGHJKL'), 'false')
+console.log(hasVowels('taq karim '), 'true')
 
 /* 8
     @func hasUpperCase
